@@ -5,7 +5,7 @@
 //918 -> 1
 Console.WriteLine("Виедите трехзначное число: ");
 int num =  int.Parse(Console.ReadLine());
-if (num >999 && num <100) Console.WriteLine(" число: ");
+if (num >999 && num <100) Console.WriteLine(" Вы ввели неправильное число: ");
 else
 {
     //int a2 = num % 100;
