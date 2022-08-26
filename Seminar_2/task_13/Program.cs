@@ -6,9 +6,5 @@
 Console.WriteLine("Виедите число 1: ");
 int num =  int.Parse(Console.ReadLine());
 if (num<100)  Console.WriteLine("третьей цифры нет");
-
-
-//int a2 = num % 100;
-//int result = a2/10;
 int result = (num%1000)/100;
 Console.WriteLine($"{result}");    
