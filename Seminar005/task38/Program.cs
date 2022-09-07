@@ -80,10 +80,10 @@ Console.WriteLine("Введите длину массива: ");
 int number = Check();
 
 Console.WriteLine("Введите минимум диапазона массива: ");
-int minValue = Check();//Doudle();
+int minValue = Check();
 
 Console.WriteLine("Введите максимум диапазона массива: ");
-int maxValue = Check();//Doudle();
+int maxValue = Check();
 
 double[] arr = CreateArray(number, minValue, maxValue);
 PrintArray(arr);

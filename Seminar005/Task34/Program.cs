@@ -67,6 +67,4 @@ int[] evencountarray = CreateArray(lenght);
 
 Write(evencountarray);
 
-//EvenSum(evensumarray);
-
 Console.WriteLine($"Количество четных элементов:  {EvenCount(evencountarray)}");
