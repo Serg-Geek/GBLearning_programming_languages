@@ -1,6 +1,4 @@
-﻿
-// Задача 47: Задайте двумерный массив размером m×n, заполненный случайными вещественными числами.
-
+﻿// Задача 47: Задайте двумерный массив размером m×n, заполненный случайными вещественными числами.
 void PrintArray(double[,] array)
 {
     for (int i = 0; i < array.GetLength(0); i++)
@@ -14,7 +12,6 @@ void PrintArray(double[,] array)
 }
 
 // Функция получение строки и проверка на число.
-
 int Check()
 {
     int number;
@@ -22,7 +19,6 @@ int Check()
     {
         Console.WriteLine($"Введите число не менее 2: ");
         string str = Console.ReadLine();
-
         try
         {
             number = Convert.ToInt32(str);
@@ -37,10 +33,8 @@ int Check()
                     Console.WriteLine("Ошибка!!!!! Неверное число. необходимо >1.");
                     Console.WriteLine();
                 }
-
             }
         }
-
         catch (Exception)
         {
             Console.WriteLine("Ошибка!!!!! Неверное число. Попробуйте еще раз только цифры.");
@@ -69,7 +63,6 @@ double CheckDoudle()
         }
     }
 }
-
 // Фунция заполнения массива
 double[,] GetArrayDouble(int m, int n, double minValue, double maxValue)
 {
@@ -85,7 +78,6 @@ double[,] GetArrayDouble(int m, int n, double minValue, double maxValue)
     }
     return result;
 }
-
 Console.WriteLine("input row: ");
 int m = Check();
 Console.WriteLine("input col: ");

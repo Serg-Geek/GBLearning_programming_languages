@@ -9,9 +9,7 @@
 
 int[,] GetArray2(int m, int n, int minValue, int maxValue)
 {
-
     int[,] result = new int[m, n];
-
     for (int i = 0; i < m; i++)
     {
         for (int j = 0; j < n; j++)
@@ -29,7 +27,6 @@ int Check2()
     {
         Console.WriteLine($"Введите число: ");
         string str = Console.ReadLine();
-
         try
         {
             number = Convert.ToInt32(str);
@@ -64,7 +61,6 @@ int Check()
                     Console.WriteLine("Ошибка!!!!! Неверное число. необходимо >1.");
                     Console.WriteLine();
                 }
-
             }
         }
         catch (Exception)
@@ -75,19 +71,17 @@ int Check()
     }
 }
 double[] SumCol(int[,] array)
-{    
+{
     double[] sum = new double[array.GetLength(1)];
-    for( int i = 0; i<array.GetLength(1)  ; i++)
+    for (int i = 0; i < array.GetLength(1); i++)
     {
-        sum[i] =0;
-        for(int  j=0; j<array.GetLength(0); j++)
+        sum[i] = 0;
+        for (int j = 0; j < array.GetLength(0); j++)
         {
-            sum[i] += array[j,i];
+            sum[i] += array[j, i];
         }
-         
-        sum[i] = sum[i]/array.GetLength(0);
+        sum[i] = sum[i] / array.GetLength(0);
     }
-      
     return sum;
 }
 
@@ -112,7 +106,7 @@ int minValue = Check2();
 Console.WriteLine("input max: ");
 int maxValue = Check2();
 Console.WriteLine();
-int[,] myarray = GetArray2(m,n ,  minValue, maxValue);
+int[,] myarray = GetArray2(m, n, minValue, maxValue);
 PrintArray(myarray);
 Console.WriteLine();
 double[] middlecol = SumCol(myarray);
