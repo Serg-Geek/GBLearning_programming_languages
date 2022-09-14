@@ -8,7 +8,7 @@ double x1 = double.Parse(Console.ReadLine());
 Console.WriteLine("input y1: ");
 double y1 = double.Parse(Console.ReadLine());
 Console.WriteLine("input z1: ");
-double  z = double.Parse(Console.ReadLine());
+double  z1 = double.Parse(Console.ReadLine());
 
 Console.WriteLine("input x2: ");
 double x2 = double.Parse(Console.ReadLine());
