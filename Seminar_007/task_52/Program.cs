@@ -101,5 +101,6 @@ Console.WriteLine();
 int[,] myarray = GetArray2(m, n, minValue, maxValue);
 PrintArray(myarray);
 Console.WriteLine();
+Console.WriteLine("Среднее арифметическое каждого столбца:");
 double[] middlecol = SumCol(myarray);
 Console.WriteLine(string.Join("\t", middlecol));
