@@ -50,17 +50,9 @@ int Check()
         try
         {
             number = Convert.ToInt32(str);
-            while (number >= 2)
+            if (number >= 2)
             {
-                try
-                {
-                    return number;
-                }
-                catch (Exception)
-                {
-                    Console.WriteLine("Ошибка!!!!! Неверное число. необходимо >1.");
-                    Console.WriteLine();
-                }
+                return number;
             }
         }
         catch (Exception)

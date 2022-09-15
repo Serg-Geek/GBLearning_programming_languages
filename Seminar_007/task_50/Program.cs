@@ -1,18 +1,13 @@
-﻿//Задача 50: Напишите программу, которая на вход принимает позиции элемента
-// в двумерном массиве, и возвращает значение этого элемента или же указание, что такого элемента нет.
+﻿// Задача 50. Напишите программу, которая на вход принимает число и генерирует случайный двумерный массив, и возвращает индексы этого элемента или же указание, что такого элемента нет.
 // Например, задан массив:
 // 1 4 7 2
 // 5 9 2 3
 // 8 4 2 4
-
-//17 -> такого числа в массиве нет
-
+// 17 -> такого числа в массиве нет
 
 int[,] GetArray2(int m, int n, int minValue, int maxValue)
 {
-
     int[,] result = new int[m, n];
-
     for (int i = 0; i < m; i++)
     {
         for (int j = 0; j < n; j++)
@@ -22,49 +17,44 @@ int[,] GetArray2(int m, int n, int minValue, int maxValue)
     }
     return result;
 }
-
-void Elem(int[,] Array, int row, int col)
+void FindElem(int[,] array, int numEl)
 {
-
-    if (row > Array.GetLength(0) || col > Array.GetLength(1) || row <0 || col < 0)
+    for (int i = 0; i < array.GetLength(0); i++)
     {
-        Console.WriteLine("такого числа в массиве нет");
-
+        for (int j = 0; j < array.GetLength(1); j++)
+        {
+            if (array[i, j] == numEl)
+            {
+                Console.WriteLine($"позиция элемента с значением {numEl}-[{i}, {j}]");
+                return;
+            }
+        }
     }
-    else
-    {
-       int elem = Array[row, col]; 
-       Console.WriteLine(elem);
-    }
+    Console.WriteLine($"Такого числа в массиве нет");
 }
 void PrintArray(int[,] array)
 {
-   
-    for(int i =0; i<array.GetLength(0); i++ )
-{
-    for( int j=0; j<array.GetLength(1); j++)
+    for (int i = 0; i < array.GetLength(0); i++)
     {
-        Console.Write($"{array[i,j]} ");
+        for (int j = 0; j < array.GetLength(1); j++)
+        {
+            Console.Write($"{array[i, j]} \t");
+        }
+        Console.WriteLine();
     }
-    Console.WriteLine();
 }
-}
-
-
-Console.WriteLine("input m: ");
+Console.WriteLine("Введите число для проверки наличия в массиве: ");
+int elem = int.Parse(Console.ReadLine());
+Console.WriteLine("Введите кол-во строк: ");
 int m = int.Parse(Console.ReadLine());
-
-Console.WriteLine("input n: ");
+Console.WriteLine("Введите кол-во столбцов: ");
 int n = int.Parse(Console.ReadLine());
 Console.WriteLine("input min: ");
 int minValue = int.Parse(Console.ReadLine());
 Console.WriteLine("input max: ");
 int maxValue = int.Parse(Console.ReadLine());
-
+Console.WriteLine();
 int[,] myarray = GetArray2(m, n, minValue, maxValue);
 PrintArray(myarray);
-Console.WriteLine("input x: ");
-int x = int.Parse(Console.ReadLine());
-Console.WriteLine("input y: ");
-int y = int.Parse(Console.ReadLine());
-Elem(myarray, x,y);
+Console.WriteLine();
+FindElem(myarray, elem);
